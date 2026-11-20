@@ -1,0 +1,13 @@
+# Stitch local artifacts / secrets
+.stitch/screens/
+.stitch/*-payload.json
+.stitch/create-project.json
+.stitch/generate-result.json
+.stitch/prompt-portfolio.txt
+.stitch/*.py
+
+# Local preview copy (archived under alts/02-stitch)
+preview-stitch.html
+
+# Agent skill install (optional local tooling)
+.agents/

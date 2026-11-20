@@ -1,0 +1,36 @@
+{
+  "title": "Portafolio Diego Cortés Pinilla",
+  "projectId": "14251958288292026908",
+  "canvasUrl": "https://stitch.google.com/projects/14251958288292026908",
+  "designSystem": {
+    "id": "4226839727532844359",
+    "displayName": "Asfalto + cobre",
+    "uploadedDesignMdId": "480f35c6a3a449f396188b20b86fa623",
+    "colors": {
+      "bg": "#0c0b0a",
+      "accent": "#d4894c",
+      "accent2": "#2a9b8f",
+      "ink": "#f3efe9"
+    },
+    "fonts": {
+      "sans": "Inter",
+      "mono": "JetBrains Mono"
+    },
+    "roundness": "ROUND_TWELVE"
+  },
+  "screens": [
+    {
+      "id": "21d8a85acbf044aaad654abeb3d98d77",
+      "title": "Portafolio desktop",
+      "note": "Initial generation"
+    },
+    {
+      "id": "9dab72b14d4344c0a23348bea8fbaca3",
+      "title": "Portafolio desktop (design system applied)",
+      "note": "After stitch edit --design-system",
+      "html": ".stitch/screens/portfolio-desktop-ds.html",
+      "png": ".stitch/screens/portfolio-desktop-ds.png"
+    }
+  ],
+  "notes": "Stitch exploration. Production site remains vanilla index.html until user approves merging Stitch HTML."
+}
