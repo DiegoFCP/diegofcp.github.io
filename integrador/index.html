@@ -12,8 +12,13 @@
 <meta property="og:url" content="https://diegofcp.github.io/integrador/">
 <meta property="og:title" content="Diego Cortés Pinilla · Desarrollador de soluciones">
 <meta property="og:description" content="Integraciones, automatización de procesos, IA aplicada y MCP. Santiago, Chile.">
-<meta property="og:image" content="https://diegofcp.github.io/assets/og.png">
+<meta property="og:image" content="https://diegofcp.github.io/assets/og-integrador.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Diego Cortés Pinilla · Desarrollador de soluciones">
+<meta name="twitter:description" content="Integraciones, automatización de procesos, IA aplicada y MCP. Santiago, Chile.">
+<meta name="twitter:image" content="https://diegofcp.github.io/assets/og-integrador.png">
 <link rel="icon" href="data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20viewBox='0%200%2064%2064'%3E%3Cdefs%3E%3ClinearGradient%20id='g'%20x1='0'%20y1='0'%20x2='1'%20y2='1'%3E%3Cstop%20offset='0'%20stop-color='%23d4894c'/%3E%3Cstop%20offset='1'%20stop-color='%232a9b8f'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect%20width='64'%20height='64'%20rx='14'%20fill='%230c0b0a'/%3E%3Crect%20x='2'%20y='2'%20width='60'%20height='60'%20rx='12'%20fill='none'%20stroke='url(%23g)'%20stroke-width='3'/%3E%3Ctext%20x='32'%20y='42'%20text-anchor='middle'%20font-family='Inter,Arial,sans-serif'%20font-weight='700'%20font-size='26'%20fill='%23f3efe9'%3EDC%3C/text%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -22,10 +27,7 @@
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Person","name":"Diego Cortés Pinilla","jobTitle":"Desarrollador de soluciones · Integraciones, IA y automatización","url":"https://diegofcp.github.io/integrador/","email":"mailto:diegocortes.pinilla@gmail.com","address":{"@type":"PostalAddress","addressLocality":"Santiago","addressCountry":"CL"},"alumniOf":{"@type":"CollegeOrUniversity","name":"Duoc UC"},"sameAs":["https://www.linkedin.com/in/diegocortes-informatico/","https://github.com/DiegoFCP"]}
 </script>
-<script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config={darkMode:'class',theme:{extend:{colors:{asphalt:'#0c0b0a','warm-charcoal':'#121110','card-umber':'#171614','card-lift':'#1e1c1a','paper-ink':'#f3efe9','warm-stone':'#b8b0a6','dust-mute':'#8a837a','forge-copper':'#d4894c','signal-teal':'#2a9b8f','production-green':'#3dba8a','concept-amber':'#e0a84a','personal-lilac':'#8b7ec8'},fontFamily:{sans:['Inter','system-ui','sans-serif'],mono:['JetBrains Mono','ui-monospace','monospace']},maxWidth:{content:'1120px'}}}}
-</script>
+<link rel="stylesheet" href="styles.css">
 <style>
   html{scroll-behavior:smooth;scroll-padding-top:84px}
   ::selection{background:rgba(212,137,76,.35)}
@@ -33,6 +35,25 @@ tailwind.config={darkMode:'class',theme:{extend:{colors:{asphalt:'#0c0b0a','warm
   .grad-text{background:linear-gradient(135deg,#d4894c 0%,#c9a35c 45%,#2a9b8f 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
   .mono-ring{position:relative}
   .mono-ring::before{content:"";position:absolute;inset:0;border-radius:9px;padding:1.5px;background:linear-gradient(135deg,#d4894c,#2a9b8f);-webkit-mask:linear-gradient(#000 0 0) content-box,linear-gradient(#000 0 0);-webkit-mask-composite:xor;mask-composite:exclude}
+  .menu-btn{display:grid;place-items:center;width:40px;height:40px;border-radius:10px;border:1px solid rgba(255,255,255,.14);background:transparent;color:#f3efe9;cursor:pointer;flex-shrink:0}
+  .menu-btn svg{pointer-events:none}
+  #mobile-nav{display:none;border-top:1px solid rgba(255,255,255,.08);background:#121110;padding:12px 24px 18px}
+  #mobile-nav a{display:block;padding:12px 12px;border-radius:10px;color:#b8b0a6;font-size:14px;text-decoration:none}
+  #mobile-nav a:hover{color:#f3efe9;background:rgba(255,255,255,.06)}
+  header.open #mobile-nav{display:block}
+  .flow-card{position:relative;border-radius:1rem;border:1px solid rgba(255,255,255,.14);background:linear-gradient(to bottom,rgba(30,28,26,.95),rgba(18,17,16,.95));box-shadow:0 25px 50px -12px rgba(0,0,0,.5);overflow:hidden}
+  .flow-bar{display:flex;align-items:center;gap:.5rem;padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.08)}
+  .flow-bar i{width:10px;height:10px;border-radius:999px;background:#2e2a26;display:block}
+  .flow-bar span{margin-left:.5rem;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:12px;color:#8a837a}
+  .flow-steps{list-style:none;margin:0;padding:1.25rem 1.25rem 1.5rem;display:flex;flex-direction:column;gap:.75rem}
+  .flow-steps li{display:flex;align-items:center;gap:.75rem;padding:.85rem 1rem;border-radius:12px;border:1px solid rgba(255,255,255,.08);background:rgba(255,255,255,.03);font-size:14px;font-weight:600;color:#f3efe9}
+  .flow-steps li .n{flex-shrink:0;width:1.75rem;height:1.75rem;border-radius:8px;display:grid;place-items:center;font-family:'JetBrains Mono',ui-monospace,monospace;font-size:11px;font-weight:700}
+  .flow-steps li:nth-child(1) .n{background:rgba(212,137,76,.18);color:#d4894c}
+  .flow-steps li:nth-child(2) .n{background:rgba(42,155,143,.18);color:#2a9b8f}
+  .flow-steps li:nth-child(3) .n{background:rgba(61,186,138,.18);color:#3dba8a}
+  .flow-steps li .sub{display:block;font-size:12px;font-weight:500;color:#8a837a;margin-top:2px}
+  .flow-arrow{text-align:center;color:#8a837a;font-size:12px;letter-spacing:.08em;padding:0 .25rem}
+  @media (min-width:1024px){.menu-btn{display:none!important} #mobile-nav{display:none!important}}
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important;animation:none!important}}
 </style>
 </head>
@@ -45,7 +66,7 @@ tailwind.config={darkMode:'class',theme:{extend:{colors:{asphalt:'#0c0b0a','warm
   <div class="absolute inset-0 opacity-55 bg-[linear-gradient(rgba(255,255,255,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.08)_1px,transparent_1px)] bg-[size:56px_56px] [mask-image:radial-gradient(ellipse_70%_60%_at_50%_20%,#000_30%,transparent_75%)]"></div>
 </div>
 
-<header class="fixed top-0 w-full z-50 h-16 bg-asphalt/80 backdrop-blur-md border-b border-white/[0.08]">
+<header id="site-header" class="fixed top-0 w-full z-50 bg-asphalt/80 backdrop-blur-md border-b border-white/[0.08]">
   <div class="h-16 max-w-content mx-auto px-6 flex items-center justify-between gap-4">
     <a class="flex items-center gap-3 font-semibold tracking-tight" href="#inicio">
       <span class="mono-ring w-8 h-8 grid place-items-center text-xs font-bold bg-asphalt rounded-[9px]" aria-hidden="true">DC</span>
@@ -58,8 +79,21 @@ tailwind.config={darkMode:'class',theme:{extend:{colors:{asphalt:'#0c0b0a','warm
       <a class="px-3 py-2 rounded-lg text-sm text-warm-stone hover:text-paper-ink hover:bg-white/[0.06]" href="#stack">Stack</a>
       <a class="px-3 py-2 rounded-lg text-sm text-warm-stone hover:text-paper-ink hover:bg-white/[0.06]" href="#contacto">Contacto</a>
     </nav>
-    <a class="hidden sm:inline-flex items-center h-9 px-3.5 rounded-[10px] text-sm font-semibold border border-white/[0.14] hover:bg-white/[0.07]" href="mailto:diegocortes.pinilla@gmail.com">Contactar</a>
+    <div class="flex items-center gap-2">
+      <a class="hidden sm:inline-flex items-center h-9 px-3.5 rounded-[10px] text-sm font-semibold border border-white/[0.14] hover:bg-white/[0.07]" href="mailto:diegocortes.pinilla@gmail.com">Contactar</a>
+      <button type="button" class="menu-btn" id="menuBtn" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-nav">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
   </div>
+  <nav id="mobile-nav" aria-label="Principal móvil">
+    <a href="#enfoque">Enfoque</a>
+    <a href="#casos">Casos</a>
+    <a href="#experiencia">Experiencia</a>
+    <a href="#stack">Stack</a>
+    <a href="#contacto">Contacto</a>
+    <a href="mailto:diegocortes.pinilla@gmail.com">Contactar</a>
+  </nav>
 </header>
 
 <main id="main" class="relative z-10 pt-16">
@@ -80,29 +114,17 @@ tailwind.config={darkMode:'class',theme:{extend:{colors:{asphalt:'#0c0b0a','warm
       <div class="flex flex-wrap gap-3 pt-1">
         <a class="inline-flex items-center justify-center h-11 px-5 rounded-xl font-semibold text-sm bg-paper-ink text-asphalt hover:bg-[#f5ebe0] shadow-[0_8px_30px_-8px_rgba(212,137,76,.55)]" href="mailto:diegocortes.pinilla@gmail.com">Contactar</a>
         <a class="inline-flex items-center justify-center h-11 px-5 rounded-xl font-semibold text-sm border border-white/[0.14] bg-white/[0.03] hover:bg-white/[0.07]" href="#casos">Ver casos</a>
-        <a class="inline-flex items-center justify-center h-11 px-5 rounded-xl font-semibold text-sm border border-white/[0.14] bg-white/[0.03] hover:bg-white/[0.07]" href="https://www.linkedin.com/in/diegocortes-informatico/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-        <a class="inline-flex items-center justify-center h-11 px-5 rounded-xl font-semibold text-sm border border-white/[0.14] bg-white/[0.03] hover:bg-white/[0.07]" href="https://github.com/DiegoFCP" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
 
-    <div class="lg:col-span-5" role="img" aria-label="Tarjeta decorativa con el perfil: integraciones, automatización e IA con MCP.">
-      <div class="relative rounded-2xl border border-white/[0.14] bg-gradient-to-b from-[#1e1c1a]/95 to-[#121110]/95 shadow-2xl overflow-hidden">
-        <div class="flex items-center gap-2 px-4 py-3 border-b border-white/[0.08]">
-          <span class="w-2.5 h-2.5 rounded-full bg-[#2e2a26]"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-[#2e2a26]"></span>
-          <span class="w-2.5 h-2.5 rounded-full bg-[#2e2a26]"></span>
-          <span class="ml-2 font-mono text-xs text-dust-mute">soluciones.ts</span>
-        </div>
-        <pre class="p-5 font-mono text-[12.5px] leading-[1.75] text-[#e2ddd4] overflow-x-auto m-0"><span class="text-[#e0a070]">const</span> <span class="text-[#d4b896]">diego</span> = {
-  rol: <span class="text-[#7ec8b8]">"Desarrollador de soluciones"</span>,
-  foco: [<span class="text-[#7ec8b8]">"integraciones ERP"</span>,
-         <span class="text-[#7ec8b8]">"automatización"</span>, <span class="text-[#7ec8b8]">"IA + MCP"</span>],
-  stack: [<span class="text-[#7ec8b8]">"TypeScript"</span>, <span class="text-[#7ec8b8]">"Next.js"</span>,
-          <span class="text-[#7ec8b8]">"Node.js"</span>, <span class="text-[#7ec8b8]">"Python"</span>, <span class="text-[#7ec8b8]">"SQL"</span>],
-  integra: <span class="text-[#7ec8b8]">"SAP Business One"</span>,
-  ia: [<span class="text-[#7ec8b8]">"Claude"</span>, <span class="text-[#7ec8b8]">"Cursor"</span>, <span class="text-[#7ec8b8]">"MCP"</span>],
-};
-<span class="text-[#7a736c]">// Del proceso actual a producción.</span></pre>
+    <div class="lg:col-span-5" role="img" aria-label="Diagrama del flujo de trabajo: del proceso actual, a integración y automatización, hasta ERP en producción.">
+      <div class="flow-card">
+        <div class="flow-bar" aria-hidden="true"><i></i><i></i><i></i><span>flujo · proceso → producción</span></div>
+        <ol class="flow-steps">
+          <li><span class="n" aria-hidden="true">01</span><span>Proceso As-Is<span class="sub">Levantamiento con negocio</span></span></li>
+          <li><span class="n" aria-hidden="true">02</span><span>Integración / automatización<span class="sub">Python, APIs, Claude · Cursor · MCP</span></span></li>
+          <li><span class="n" aria-hidden="true">03</span><span>ERP / producción<span class="sub">SAP Business One y sistemas internos</span></span></li>
+        </ol>
       </div>
     </div>
   </section>
@@ -362,7 +384,7 @@ tailwind.config={darkMode:'class',theme:{extend:{colors:{asphalt:'#0c0b0a','warm
         <a class="inline-flex items-center h-11 px-5 rounded-xl font-semibold text-sm border border-white/[0.14] hover:bg-white/[0.07]" href="https://www.linkedin.com/in/diegocortes-informatico/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         <a class="inline-flex items-center h-11 px-5 rounded-xl font-semibold text-sm border border-white/[0.14] hover:bg-white/[0.07]" href="https://github.com/DiegoFCP" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
-      <p class="mt-8 text-sm text-dust-mute">También puedes ver el perfil full stack en <a class="text-forge-copper hover:underline" href="/">diegofcp.github.io</a>.</p>
+      <p class="mt-8 text-sm text-dust-mute">Perfil soluciones · IA · MCP. Cara principal Full Stack: <a class="text-forge-copper hover:underline" href="/">diegofcp.github.io</a>.</p>
     </div>
   </section>
 </main>
@@ -370,13 +392,23 @@ tailwind.config={darkMode:'class',theme:{extend:{colors:{asphalt:'#0c0b0a','warm
 <footer class="relative z-10 border-t border-white/[0.08] py-7">
   <div class="max-w-content mx-auto px-6 flex flex-wrap justify-between gap-4 items-center text-sm text-dust-mute">
     <span>© <span id="yr">2026</span> Diego Cortés Pinilla · Santiago, Chile · perfil integrador</span>
-    <nav class="flex gap-4" aria-label="Redes">
+    <nav class="flex gap-4" aria-label="Redes y perfiles">
+      <a class="text-warm-stone hover:text-paper-ink py-1 min-h-6 inline-block" href="/">Perfil Full Stack</a>
       <a class="text-warm-stone hover:text-paper-ink py-1 min-h-6 inline-block" href="https://www.linkedin.com/in/diegocortes-informatico/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a class="text-warm-stone hover:text-paper-ink py-1 min-h-6 inline-block" href="https://github.com/DiegoFCP" target="_blank" rel="noopener noreferrer">GitHub</a>
       <a class="text-warm-stone hover:text-paper-ink py-1 min-h-6 inline-block" href="mailto:diegocortes.pinilla@gmail.com">Email</a>
     </nav>
   </div>
 </footer>
-<script>document.getElementById('yr').textContent=new Date().getFullYear()</script>
+<script>
+(function(){
+  document.getElementById('yr').textContent=new Date().getFullYear();
+  var header=document.getElementById('site-header'),btn=document.getElementById('menuBtn');
+  function closeMenu(){header.classList.remove('open');btn.setAttribute('aria-expanded','false');btn.setAttribute('aria-label','Abrir menú')}
+  btn.addEventListener('click',function(){var o=header.classList.toggle('open');btn.setAttribute('aria-expanded',o?'true':'false');btn.setAttribute('aria-label',o?'Cerrar menú':'Abrir menú')});
+  document.querySelectorAll('#mobile-nav a').forEach(function(a){a.addEventListener('click',closeMenu)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&header.classList.contains('open')){closeMenu();btn.focus()}});
+})();
+</script>
 </body>
 </html>

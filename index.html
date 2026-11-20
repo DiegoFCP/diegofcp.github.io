@@ -95,8 +95,14 @@ h1{font-size:clamp(2.5rem,5.4vw,4.1rem);line-height:1.02;letter-spacing:-.045em;
 .code-bar{display:flex;align-items:center;gap:7px;padding:12px 16px;border-bottom:1px solid var(--line)}
 .code-bar i{width:11px;height:11px;border-radius:50%;background:#2e2a26}
 .code-bar span{margin-left:10px;font:12px var(--mono);color:var(--mute)}
-.code pre{margin:0;padding:20px 20px 24px;font:13.5px/1.75 var(--mono);color:#e2ddd4;overflow-x:auto}
-.k{color:#e0a070}.s{color:#7ec8b8}.p{color:#d4b896}.c{color:#7a736c}
+.flow-steps{list-style:none;margin:0;padding:20px 20px 24px;display:flex;flex-direction:column;gap:12px}
+.flow-steps li{display:flex;align-items:center;gap:12px;padding:14px 16px;border-radius:12px;border:1px solid var(--line);background:rgba(255,255,255,.03)}
+.flow-steps .n{flex:none;width:28px;height:28px;border-radius:8px;display:grid;place-items:center;font:700 11px/1 var(--mono)}
+.flow-steps li:nth-child(1) .n{background:rgba(212,137,76,.18);color:var(--acc)}
+.flow-steps li:nth-child(2) .n{background:rgba(42,155,143,.18);color:var(--acc2)}
+.flow-steps li:nth-child(3) .n{background:rgba(61,186,138,.18);color:var(--ok)}
+.flow-steps b{display:block;font-size:14px;font-weight:600;color:var(--ink)}
+.flow-steps small{display:block;margin-top:2px;font-size:12px;color:var(--mute);font-weight:500}
 
 /* Sections */
 section{position:relative;z-index:1;padding:88px 0}
@@ -270,31 +276,22 @@ footer a:hover{color:var(--ink)}
   <section class="hero" id="inicio" aria-labelledby="hero-title">
     <div class="wrap hero-grid">
       <div>
-        <span class="eyebrow reveal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Santiago, Chile</span>
-        <h1 id="hero-title" class="reveal">Diego <span class="grad">Cortés Pinilla</span></h1>
-        <p class="role reveal">Software Developer Full Stack<br>Integraciones ERP, automatización de procesos e IA aplicada</p>
-        <p class="lede reveal">Conecto procesos de negocio con software en producción: portales e integraciones al ERP, automatización operativa con Python y un flujo diario con Claude, Cursor y MCP. Hoy soy el desarrollador de los proyectos internos del área TI en Neumachile.</p>
+        <span class="eyebrow"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>Santiago, Chile</span>
+        <h1 id="hero-title">Diego <span class="grad">Cortés Pinilla</span></h1>
+        <p class="role">Software Developer Full Stack<br>Integraciones ERP, automatización de procesos e IA aplicada</p>
+        <p class="lede">Conecto procesos de negocio con software en producción: portales e integraciones al ERP, automatización operativa con Python y un flujo diario con Claude, Cursor y MCP. Hoy soy el desarrollador de los proyectos internos del área TI en Neumachile.</p>
         <div class="cta reveal">
           <a class="btn primary" href="mailto:diegocortes.pinilla@gmail.com"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>Contactar</a>
           <a class="btn" href="#proyectos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>Ver proyectos</a>
-          <a class="btn" href="https://www.linkedin.com/in/diegocortes-informatico/" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0z"/></svg>LinkedIn</a>
-          <a class="btn" href="https://github.com/DiegoFCP" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.6-1.4-1.4-1.8-1.4-1.8-1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.7-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6.1-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0C17.3 4.5 18.3 4.8 18.3 4.8c.7 1.6.2 2.8.1 3.2.8.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A12 12 0 0 0 12 .3"/></svg>GitHub</a>
         </div>
       </div>
-      <div class="code reveal" role="img" aria-label="Tarjeta decorativa estilo editor de código con el perfil de Diego: rol, stack, integraciones ERP, automatización de procesos e IA.">
-        <div class="code-bar" aria-hidden="true"><i></i><i></i><i></i><span>perfil.ts</span></div>
-<pre aria-hidden="true"><span class="k">const</span> <span class="p">diego</span> = {
-  rol: <span class="s">"Software Developer Full Stack"</span>,
-  base: <span class="s">"Santiago, Chile"</span>,
-  stack: [<span class="s">"TypeScript"</span>, <span class="s">"Next.js"</span>,
-          <span class="s">"Node.js"</span>, <span class="s">"Python"</span>, <span class="s">"SQL"</span>],
-  integra: <span class="s">"SAP Business One"</span>,
-  automatiza: [<span class="s">"cobranza"</span>,
-               <span class="s">"análisis de crédito"</span>],
-  ia: [<span class="s">"Claude"</span>, <span class="s">"Cursor"</span>, <span class="s">"MCP"</span>],
-};
-<span class="c">// Del proceso actual</span>
-<span class="c">// a la puesta en producción.</span></pre>
+      <div class="code reveal" role="img" aria-label="Diagrama del flujo de trabajo: del proceso actual, a integración y automatización, hasta ERP en producción.">
+        <div class="code-bar" aria-hidden="true"><i></i><i></i><i></i><span>flujo · proceso → producción</span></div>
+        <ol class="flow-steps">
+          <li><span class="n" aria-hidden="true">01</span><span><b>Proceso As-Is</b><small>Levantamiento con negocio</small></span></li>
+          <li><span class="n" aria-hidden="true">02</span><span><b>Integración / automatización</b><small>Python, APIs, Claude · Cursor · MCP</small></span></li>
+          <li><span class="n" aria-hidden="true">03</span><span><b>ERP / producción</b><small>SAP Business One y sistemas internos</small></span></li>
+        </ol>
       </div>
     </div>
   </section>
@@ -464,8 +461,8 @@ footer a:hover{color:var(--ink)}
 
 <footer>
   <div class="wrap">
-    <span>© <span id="yr">2026</span> Diego Cortés Pinilla · Santiago, Chile</span>
-    <nav aria-label="Redes">
+    <span>© <span id="yr">2026</span> Diego Cortés Pinilla · Santiago, Chile · perfil Full Stack</span>
+    <nav aria-label="Redes y perfiles">
       <a href="/integrador/">Perfil integrador</a>
       <a href="https://www.linkedin.com/in/diegocortes-informatico/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
       <a href="https://github.com/DiegoFCP" target="_blank" rel="noopener noreferrer">GitHub</a>
